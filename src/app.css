@@ -1,0 +1,94 @@
+@font-face {
+  font-family: NeueHelveticaforZara-Lt;
+  src: url('NeueHelveticaforZara-Lt.otf');
+}
+
+body { 
+  font-family: "NeueHelveticaforZara-Lt", "Verdana"; 
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding-left: 80px;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-left: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#searchbox {
+  margin: 1em;
+}
+
+#clear-refinements {
+  margin-right: 4em;
+  margin-top: 1em;
+}
+
+.ais-SearchBox { 
+  margin: 1em 0; 
+}
+
+.ais-Pagination { 
+  margin-top: 5em; 
+}
+
+.ais-Pagination-list {
+  margin-left: 30%;
+  margin-bottom: 5em;
+}
+
+.left-panel { 
+  float: left; 
+  margin-top: 1em; 
+  width: 250px; }
+
+.right-panel { 
+  margin-left: 250px; }
+
+.ais-InstantSearch { 
+  max-width: 1260px; 
+  margin: 0 auto; }
+
+.ais-Hits-list { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 1em; }
+
+.ais-Hits-item { 
+  padding: 1em;
+  margin: 0.5em;
+  text-align: center;
+}
+
+.ais-Hits-item img { 
+  margin-bottom: 1em;
+}
+
+.hit-name { 
+  margin-bottom: 0.5em; }
+
+.hit-description { 
+  color: #888; 
+  font-size: 14px; 
+  margin-bottom: 0.5em; }
+
+.hit-size { 
+  color: #888; 
+  font-size: 12px; 
+  margin-bottom: 0.5em; }

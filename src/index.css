@@ -1,0 +1,8 @@
+@font-face {
+  font-family: NeueHelveticaforZara-Lt;
+  src: url('NeueHelveticaforZara-Lt.otf');
+}
+
+body {
+  font-family: -apple-system, NeueHelveticaforZara-Lt, 'Verdana';
+}
