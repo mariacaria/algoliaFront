@@ -1,12 +1,11 @@
 import algoliasearch from 'algoliasearch/lite';
 import instantsearch from 'instantsearch.js';
+
 import {
   configure,
   hits,
   pagination,
-  refinementList,
-  searchBox,
-  rangeSlider
+  searchBox
 } from 'instantsearch.js/es/widgets';
 
 const searchClient = algoliasearch(
@@ -50,10 +49,6 @@ search.addWidgets([
   }),
   configure({
     hitsPerPage: 12,
-  }),
-  refinementList({
-    container: '#range-slider',
-    attribute: 'tallas',
   }),
   pagination({
     container: '#pagination',
