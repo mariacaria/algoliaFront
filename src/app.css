@@ -67,7 +67,7 @@ body {
 
 .ais-Hits-list { 
   display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(4, 1fr); 
   grid-gap: 1em; }
 
 .ais-Hits-item { 
@@ -92,3 +92,16 @@ body {
   color: #888; 
   font-size: 12px; 
   margin-bottom: 0.5em; }
+
+  .btn {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 0.5em;
+  }
+  
+  .btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+  }
