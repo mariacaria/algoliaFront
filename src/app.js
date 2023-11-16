@@ -69,12 +69,12 @@ search.addWidgets([
     container: '#tienda-filter',
     attribute: 'tienda'
   }),
-  // panel({
-  //   templates: { header: 'Precio' },
-  // })(rangeSlider)({
-  //   container: '#precio-filter',
-  //   attribute: 'precio',
-  // }),
+  panel({
+    templates: { header: 'Precio' },
+  })(rangeSlider)({
+    container: '#precio-filter',
+    attribute: 'precio',
+  }),
   panel({
     templates: { header: 'Talla' },
   })(refinementList)({
