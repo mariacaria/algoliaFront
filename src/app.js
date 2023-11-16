@@ -1,11 +1,18 @@
 import algoliasearch from 'algoliasearch/lite';
 import instantsearch from 'instantsearch.js';
+import { clearRefinements } from 'instantsearch.js/es/lib/utils';
 
 import {
   configure,
   hits,
   pagination,
-  searchBox
+  refinementList,
+  clearRefinements,
+  panel,
+  searchBox,
+  stats,
+  currentRefinements,
+  rangeSlider
 } from 'instantsearch.js/es/widgets';
 
 const searchClient = algoliasearch(
@@ -14,7 +21,7 @@ const searchClient = algoliasearch(
 );
 
 const search = instantsearch({
-  indexName: 'INDICE_TEST',
+  indexName: 'INDICE_TEST_1',
   searchClient,
   future: { preserveSharedStateOnUnmount: true },
   insights: true,
@@ -37,7 +44,7 @@ search.addWidgets([
           <div class="hit-description">
             ${components.Highlight({ hit, attribute: 'descripcion' })}
           </div>
-          <div class="hit-size">Tallas: ${components.Highlight({ hit, attribute: 'tallas' })}</div>
+          <div class="hit-size">Tallas Disponibles: ${components.Highlight({ hit, attribute: 'tallas' })}</div>
           <div class="hit-price">${components.Highlight({ hit, attribute: 'precio' })}</div>
           <p></p>
           <form action="${hit.url_producto}">
@@ -49,6 +56,33 @@ search.addWidgets([
   }),
   configure({
     hitsPerPage: 12,
+  }),
+  stats({
+    container: '#stats',
+  }),
+  currentRefinements({
+    container: '#current-ref',
+  }),
+  panel({
+    templates: { header: 'Tienda' },
+  })(refinementList)({
+    container: '#tienda-filter',
+    attribute: 'tienda'
+  }),
+  // panel({
+  //   templates: { header: 'Precio' },
+  // })(rangeSlider)({
+  //   container: '#precio-filter',
+  //   attribute: 'precio',
+  // }),
+  panel({
+    templates: { header: 'Talla' },
+  })(refinementList)({
+    container: '#talla-filter',
+    attribute: 'tallas'
+  }),
+  clearRefinements({
+    container: '#clear-refinements'
   }),
   pagination({
     container: '#pagination',
