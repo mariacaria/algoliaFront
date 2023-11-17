@@ -11,8 +11,7 @@ import {
   panel,
   searchBox,
   stats,
-  currentRefinements,
-  rangeSlider
+  currentRefinements
 } from 'instantsearch.js/es/widgets';
 
 const searchClient = algoliasearch(
@@ -21,7 +20,7 @@ const searchClient = algoliasearch(
 );
 
 const search = instantsearch({
-  indexName: 'INDICE_TEST_1',
+  indexName: 'INDICE_TEST',
   searchClient,
   future: { preserveSharedStateOnUnmount: true },
   insights: true,
@@ -69,12 +68,6 @@ search.addWidgets([
     container: '#tienda-filter',
     attribute: 'tienda'
   }),
-  // panel({
-  //   templates: { header: 'Precio' },
-  // })(rangeSlider)({
-  //   container: '#precio-filter',
-  //   attribute: 'precio',
-  // }),
   panel({
     templates: { header: 'Talla' },
   })(refinementList)({
