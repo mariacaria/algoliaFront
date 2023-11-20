@@ -37,7 +37,7 @@ search.addWidgets([
     templates: {
       item: (hit, { html, components }) => html`
         <div>
-          <img src="${hit.url_foto}" align="center" width="150px" height="250px"/>
+          <img src="${hit.url_foto}" align="center" width="170px" height="250px"/>
           <div class="hit-name">
             ${components.Highlight({ hit, attribute: 'nombre' })}
           </div>
