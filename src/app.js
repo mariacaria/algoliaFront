@@ -20,7 +20,7 @@ const searchClient = algoliasearch(
 );
 
 const search = instantsearch({
-  indexName: 'INDICE_TEST',
+  indexName: 'INDICE_BUENO',
   searchClient,
   future: { preserveSharedStateOnUnmount: true },
   insights: true,
@@ -36,7 +36,7 @@ search.addWidgets([
     templates: {
       item: (hit, { html, components }) => html`
         <div>
-          <img src="${hit.url_foto}" align="center" width="150px" height="250px"/>
+          <img src="${hit.url_foto}" align="center" width="170px" height="250px"/>
           <div class="hit-name">
             ${components.Highlight({ hit, attribute: 'nombre' })}
           </div>
@@ -44,9 +44,9 @@ search.addWidgets([
             ${components.Highlight({ hit, attribute: 'descripcion' })}
           </div>
           <div class="hit-size">Tallas Disponibles: ${components.Highlight({ hit, attribute: 'tallas' })}</div>
-          <div class="hit-price">${components.Highlight({ hit, attribute: 'precio' })}</div>
+          <div class="hit-price">${components.Highlight({ hit, attribute: 'precio' })} €</div>
           <p></p>
-          <form action="${hit.url_producto}">
+          <form action="${hit.id_mongo}">
             <input class="btn" type="submit" value="VER PRODUCTO" />
           </form>
         </div>
@@ -66,7 +66,15 @@ search.addWidgets([
     templates: { header: 'Tienda' },
   })(refinementList)({
     container: '#tienda-filter',
-    attribute: 'tienda'
+    attribute: 'cadena'
+  }),
+  panel({
+    templates: { header: 'Precio' },
+  })(rangeSlider)({
+    container: '#precio-filter',
+    attribute: 'precio',
+    pips: false,
+    step: 4
   }),
   panel({
     templates: { header: 'Talla' },
