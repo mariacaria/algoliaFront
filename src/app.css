@@ -124,46 +124,51 @@ body {
   margin-left: 0.5em;
 }
 
-#searchbox .ais-SearchBox-input{
+#searchbox .aa-Form{
     caret-color: black;
     border: 0.5px solid black;
     border-radius: 0;
-    padding-left: 1rem;
     box-shadow: none;
-  }
- 
-  #searchbox .ais-SearchBox-input::placeholder {
-    color: black;
-  }
- 
-  #searchbox .ais-SearchBox-form:before {
-    display: none;
- 
-  }
- 
-  .ais-RefinementList .ais-HierarchicalMenu-count, .ais-Menu-count, .ais-RatingMenu-count, .ais-RefinementList-count, .ais-ToggleRefinement-count{
-    border-radius: 0;
-    border: 0 solid black;
-    background: transparent;
-    margin: 0;
-    padding: 0 0.5rem;
-  }
+}
 
-  .ais-RangeSlider .rheostat-progress {
-    background-color: black;
-  }
+#searchbox .aa-SubmitIcon{
+  fill: black;
+}
 
-  .ais-Panel-header {
-    color: black;
-  }
+#searchbox .ais-SearchBox-input::placeholder {
+  color: black;
+}
 
-  .ais-RangeSlider .rheostat-handle {
-    background-color: #fff;
-    border: 1px solid #d6d6e7;
-    border-radius: 10px;
-    box-shadow: 0 1px 0 0 rgba(35,38,59,.05);
-    height: 24px;
-    margin-left: -6px;
-    top: -11px;
-    width: 12px;
+#searchbox .ais-SearchBox-form:before {
+  display: none;
+
+}
+
+
+
+.ais-RefinementList .ais-HierarchicalMenu-count, .ais-Menu-count, .ais-RatingMenu-count, .ais-RefinementList-count, .ais-ToggleRefinement-count{
+  border-radius: 0;
+  border: 0 solid black;
+  background: transparent;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.ais-RangeSlider .rheostat-progress {
+  background-color: black;
+}
+
+.ais-Panel-header {
+  color: black;
+}
+
+.ais-RangeSlider .rheostat-handle {
+  background-color: #fff;
+  border: 1px solid #d6d6e7;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 0 rgba(35,38,59,.05);
+  height: 24px;
+  margin-left: -6px;
+  top: -11px;
+  width: 12px;
 }
